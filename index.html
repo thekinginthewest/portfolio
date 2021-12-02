@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Roberto Cárdenas Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <!-- Splash page -->
+    <div id = "splash-page" class = "pink portfolio-section valign-wrapper">
+      <div class = "container ">
+        <h5 class = "white-text center-align flow-text medium">Hello, my name is Roberto Cárdenas.</h5>
+        <h5 class = "white-text center-align flow-text medium">I am a Computer Science student at UC Berkeley interested in Web Development.</h5>
+        <div class = "section center-align">
+          <a href = "#projects" class = "white pink-text bold btn"><i class="material-icons right">arrow_downward</i>Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav bar --> 
+    <nav class = "pink lighten-4 pushpin" data-target = "about-me-nav">
+      <div class="nav-wrapper">
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="pink-text material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class = "active tab"><a href="#about-me">ABOUT ME</a></li>
+          <li class = "tab"><a href="#projects">MY WORK</a></li>
+          <li class = "tab"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-nav">
+      <li class = "active sidenav-tab"><a href="#about-me">ABOUT ME</a></li>
+      <li class = "sidenav-tab"><a href="#projects">MY WORK</a></li>
+      <li class = "sidenav-tab"><a href="#contact">CONTACT</a></li>
+    </ul>
+
+    <!-- About me -->
+    <div id = "about-me" class = "portfolio-section">
+      <div class = "css-grid row">
+        <!-- Left column -->
+        <div class = "left-column s12 l6 pink">
+          <!-- Picture div -->
+          <div>
+            <h4 class = "bold white-text hide-on-large-only center-align">ABOUT ME</h4>
+            <img id = "about-me-profile-picture" class = "profile-picture circle" src = "" />
+          </div>
+
+          <!-- Languages div -->
+          <div id = "about-me-languages" class = "flex-row flex-justify-space-between flex-align-center flex-wrap languages-div pink lighten-4">
+            <img id = "about-me-languages-clone" class = "responsive-img hide" src = "" />
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class = "right-column s12 l6 flex-column flex-justify-space-around flex-align-center">
+          <h4 class = "bold pink-text hide-on-med-and-down">ABOUT ME</h4>
+          <h5 id = "about-me-1" class = "pink-text center-align">
+            I am a Computer Science student with two years of experience working as a Web Developer for <a target="_blank" rel="noopener noreferrer" href = "https://www.motus.com.mx/index.html">Motus</a>, a company based in Guadalajara, Mexico.
+          </h5>
+          <h5 id = "about-me-2" class = "pink-text center-align">
+            I am passionate about how we can use software to solve problems and make information more accesible as a whole. I am currently looking to grow as a developer and to learn the skills needed to succeed within the industry.
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div id = "projects" class = "">
+
+      <!-- Modal for projects -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <!-- Carousel -->
+          <a id = "modal-image-clone" class="carousel-item hide" href=""><img src=""></a>
+          <div class="carousel carousel-slider"></div>
+
+          <div class = "modal-project-content white-text pink">
+            <h5 id = "modal-name" class = "bold">Project Name</h5>
+            <h6 id = "modal-short-description" class = "medium">Project short description</h6>
+            <h7 id = "modal-description"></h7> 
+          </div>
+          <a target="_blank" rel="noopener noreferrer" href = "" class = "element z-depth-0 white pink-text bold btn">Visit website</a>
+        </div>
+      </div>
+
+      <div class = "flex-row flex-justify-center pink section-header">
+        <h3 class = "bold white-text">PROJECTS</h3>
+      </div>
+      <div id = "projects-div" class = "css-grid row">
+        <div id = "projects-project-tile-clone" class = "pink project-tile l6 s12 hide">
+          <!-- Tile Image -->
+          <img class = "project-tile-img" src = "">
+      
+          <!-- Tile Content -->
+          <div class = "project-tile-content flex-column flex-justify-center flex-align-center">
+            <h4 class = "project-title element bold black-text"></h4>
+            <div class = "element project-tile-languages flex-row flex-justify-space-around">
+            </div>
+            <a class = "element z-depth-0 pink white-text bold btn modal-btn" href = "#modal1"><i class="material-icons right">arrow_downward</i>Learn more</a>
+          </div>
+        </div>        
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div id = "contact" class = "portfolio-section pink flex-column flex-align-center flex-justify-space-between">
+      <div class = "flex-row flex-justify-center section-header">
+        <h3 class = "bold white-text">CONTACT</h3>
+      </div>
+      <form id = "contact-form" class = "flex-column">
+        <div class="input-field">
+          <input id="name" type="text">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field">
+          <input id="email" type="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Message</label>
+        </div>
+        <input type = "submit" class = "white pink-text bold btn" value = "Submit" />
+      </form>
+
+      <footer class = "pink lighten-4 flex-column flex-justify-center flex-align-center" style = "width: 100%; height: 80px; padding: 10px;">
+        <h8>robertocardenas@berkeley.edu  ||  (619) 721 6011</h8>
+        <h8>Roberto Cárdenas 2021</h8>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      </footer>
+    </div>
+  </body>
+</html>
