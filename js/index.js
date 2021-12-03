@@ -217,8 +217,6 @@ $(document).ready(function(){
       var y_scroll_pos = window.pageYOffset;
       var projectsPos = $('#projects').offset().top;
       var contactPos = $('#contact').offset().top;
-      console.log(projectsPos);
-      console.log(contactPos);
 
       // About me
       if(y_scroll_pos >= projectsPos && y_scroll_pos < contactPos) {
