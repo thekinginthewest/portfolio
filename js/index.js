@@ -218,13 +218,15 @@ $(document).ready(function(){
       var projectsPos = $('#projects').offset().top;
       var contactPos = $('#contact').offset().top;
 
-      // About me
+      // Projects
       if(y_scroll_pos >= projectsPos && y_scroll_pos < contactPos) {
         setActiveTab($('.tab')[1]);
         setActiveSidenavTab($('.sidenav-tab')[1]);
+      // Contact
       } else if (y_scroll_pos >= contactPos) {
         setActiveTab($('.tab')[2]);
         setActiveSidenavTab($('.sidenav-tab')[2]);
+      // About me
       } else {
         setActiveTab($('.tab')[0]);
         setActiveSidenavTab($('.sidenav-tab')[0]);
