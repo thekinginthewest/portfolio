@@ -35,7 +35,7 @@ $(document).ready(function(){
         shortDescription: 'Web Based Self-Service Store Monitoring System',
         description: 'SCMI is an online system providing users with the ability to monitor and control the temperature, humidity, and status of fridges and other components in self-service stores.',
         mainPicture: 'media/scmi-main-img.jpg',
-        projectLink: 'https://scmi.mx/sistema2',
+        projectLink: null,
         pictures: [
           'media/scmi-main-img.jpg',
           'media/scmi-config-camaras.jpg',
@@ -80,8 +80,7 @@ $(document).ready(function(){
         languages: [
           'media/react.svg',
           'media/javascript.svg',
-          'media/php.png',
-          'media/mysql.png'
+          'media/php.png'
         ]
       },
       {
@@ -98,8 +97,7 @@ $(document).ready(function(){
         languages: [
           'media/react.svg',
           'media/javascript.svg',
-          'media/php.png',
-          'media/mysql.png'
+          'media/php.png'
         ]
       }
     ]
@@ -213,24 +211,24 @@ $(document).ready(function(){
   $.each($('.sidenav-tab'), (_, tab) => $(tab).click(() => setActiveSidenavTab(tab)));
 
   // Set the active tab on scroll
-  $(window).on('scroll', function() {
-      var y_scroll_pos = window.pageYOffset;
-      var projectsPos = $('#projects').offset().top;
-      var contactPos = $('#contact').offset().top;
+  // $(window).on('scroll', function() {
+  //     var y_scroll_pos = window.pageYOffset;
+  //     var projectsPos = $('#projects').offset().top;
+  //     var contactPos = $('#contact').offset().top;
 
-      // Projects
-      if(y_scroll_pos >= projectsPos && y_scroll_pos < contactPos) {
-        setActiveTab($('.tab')[1]);
-        setActiveSidenavTab($('.sidenav-tab')[1]);
-      // Contact
-      } else if (y_scroll_pos >= contactPos) {
-        setActiveTab($('.tab')[2]);
-        setActiveSidenavTab($('.sidenav-tab')[2]);
-      // About me
-      } else {
-        setActiveTab($('.tab')[0]);
-        setActiveSidenavTab($('.sidenav-tab')[0]);
-      }
-  });
+  //     // Projects
+  //     if(y_scroll_pos >= projectsPos && y_scroll_pos < contactPos) {
+  //       setActiveTab($('.tab')[1]);
+  //       setActiveSidenavTab($('.sidenav-tab')[1]);
+  //     // Contact
+  //     } else if (y_scroll_pos >= contactPos) {
+  //       setActiveTab($('.tab')[2]);
+  //       setActiveSidenavTab($('.sidenav-tab')[2]);
+  //     // About me
+  //     } else {
+  //       setActiveTab($('.tab')[0]);
+  //       setActiveSidenavTab($('.sidenav-tab')[0]);
+  //     }
+  // });
 });
 
